@@ -1,4 +1,7 @@
 .DS_Store
+test.py
+*.csv
 
 result/
+result_archive/
 __pycache__/

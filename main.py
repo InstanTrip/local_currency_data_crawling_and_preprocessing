@@ -4,6 +4,7 @@ import requests
 from bs4 import BeautifulSoup
 
 from modules.file_download import file_download
+from modules.marge_data import marge_csv_files
 
 DATA_ID = "15100062"
 RESULT_DIR = "result"
@@ -30,3 +31,6 @@ while True:
         file_id = json.loads(uddi_page.find("p").text).get("fileDataRegistVO").get("atchFileId")
 
         file_download(result_dir=RESULT_DIR, data_name=data_name, data_id=DATA_ID, file_id=file_id)
+
+# CSV 파일 병합
+marge_csv_files()
